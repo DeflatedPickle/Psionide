@@ -10,6 +10,7 @@ public class CameraShakeScript : MonoBehaviour {
 	private static float _shakeYSpeed = 0.8f;
 
 	private static bool _shake = false;
+	private static int _counter = 60;
 	
 	void Update () {
 		if (_shake) {
@@ -26,10 +27,14 @@ public class CameraShakeScript : MonoBehaviour {
 			_shakeY = -_shakeY;
 		
 			transform.Translate(newPosition);
+			
+			_counter -= 1;
 		}
 
-		if (_shakeXSpeed <= 0 && _shakeYSpeed <= 0) {
+		if (_counter == 0) {
 			_shake = false;
+			_counter = 60;
+			transform.position = new Vector3(0, 0, -10);
 		}
 	}
 
@@ -41,5 +46,6 @@ public class CameraShakeScript : MonoBehaviour {
 		_shakeYSpeed = ySpeed;
 		
 		_shake = true;
+		_counter = 60;
 	}
 }
