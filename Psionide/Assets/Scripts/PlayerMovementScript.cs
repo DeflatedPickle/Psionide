@@ -3,13 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovementScript : MonoBehaviour {
-	[Range(0, 10)]
-	public float Speed = 7;
+	[Range(0, 30)]
+	public float Speed = 10;
 
 	private bool _isMoving = false;
 	private Vector3 _originalPositon;
 	private Vector3 _newPosition;
-	
+
+	private CameraShakeScript _cameraShake;
+
+	private void Awake() {
+		_cameraShake = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraShakeScript>();
+	}
+
 	void Update () {
 		var step = Speed * Time.deltaTime;
 		
@@ -18,6 +24,8 @@ public class PlayerMovementScript : MonoBehaviour {
 		var touches = Input.touches;
 
 		if (touches.Length == 1) {
+			_isMoving = true;
+			
 			var mainFinger = touches[0];
 
 			if (mainFinger.phase == TouchPhase.Began) {
@@ -35,6 +43,7 @@ public class PlayerMovementScript : MonoBehaviour {
 			transform.position = Vector3.MoveTowards(transform.position, _newPosition, step);
 
 			if (transform.position == _newPosition) {
+				_cameraShake.Shake(x: 0.4f, y: 0.4f);
 				_isMoving = false;
 			}
 		}
