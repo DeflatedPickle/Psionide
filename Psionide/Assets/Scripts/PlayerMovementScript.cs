@@ -43,7 +43,7 @@ public class PlayerMovementScript : MonoBehaviour {
 			transform.position = Vector3.MoveTowards(transform.position, _newPosition, step);
 
 			if (transform.position == _newPosition) {
-				_cameraShake.Shake(x: 0.4f, y: 0.4f);
+				_cameraShake.Shake(x: 0.2f, y: 0.2f);
 				_isMoving = false;
 			}
 		}
