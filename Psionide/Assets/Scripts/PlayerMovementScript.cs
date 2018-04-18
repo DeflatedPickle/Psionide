@@ -11,6 +11,8 @@ public class PlayerMovementScript : MonoBehaviour {
 	private Vector3 _newPosition;
 
 	private CameraShakeScript _cameraShake;
+	
+	private bool hasCollided = false;
 
 	private void Awake() {
 		_cameraShake = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraShakeScript>();
@@ -42,10 +44,22 @@ public class PlayerMovementScript : MonoBehaviour {
 		if (_isMoving) {
 			transform.position = Vector3.MoveTowards(transform.position, _newPosition, step);
 
-			if (transform.position == _newPosition) {
+/*			if (transform.position == _newPosition) {
 				_cameraShake.Shake(x: 0.2f, y: 0.2f);
 				_isMoving = false;
+			}*/
+			
+			if (hasCollided) {
+				_cameraShake.Shake(x: 0.2f, y: 0.2f);
+				_isMoving = false;
+				hasCollided = false;
 			}
+		}
+	}
+	
+	void OnCollisionEnter2D(Collision2D other) {
+		if (other.gameObject.CompareTag("Wall")) {
+			hasCollided = true;
 		}
 	}
 }
