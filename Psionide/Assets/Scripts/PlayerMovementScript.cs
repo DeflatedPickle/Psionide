@@ -31,14 +31,17 @@ public class PlayerMovementScript : MonoBehaviour {
 			var mainFinger = touches[0];
 
 			if (mainFinger.phase == TouchPhase.Began) {
-				_newPosition = mainFinger.position;
+				// _newPosition = mainFinger.position;
+				_newPosition = RayTraceScript.RayHitPoint(mainFinger.position);
 			}
 		}
 		else if (Input.GetMouseButtonDown(0)) {
 			_isMoving = true;
 
-			_newPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-			_newPosition.z = 0f;
+			// _newPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+			// _newPosition.z = 0f;
+			
+			_newPosition = RayTraceScript.RayHitPoint(Camera.main.ScreenToWorldPoint(Input.mousePosition));
 		}
 		
 		if (_isMoving) {
