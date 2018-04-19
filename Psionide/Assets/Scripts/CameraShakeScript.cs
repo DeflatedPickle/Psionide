@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraShakeScript : MonoBehaviour {
+	[Range(0, 60)]
+	public static readonly int Counter = 7;
+	
 	private static float _shakeX = 0.8f;
 	private static float _shakeXSpeed = 0.8f;
 	
@@ -10,7 +13,7 @@ public class CameraShakeScript : MonoBehaviour {
 	private static float _shakeYSpeed = 0.8f;
 
 	private static bool _shake = false;
-	private static int _counter = 60;
+	private static int _counter = Counter;
 	
 	void Update () {
 		if (_shake) {
@@ -33,7 +36,7 @@ public class CameraShakeScript : MonoBehaviour {
 
 		if (_counter == 0) {
 			_shake = false;
-			_counter = 60;
+			_counter = Counter;
 			transform.position = new Vector3(0, 0, -10);
 		}
 	}
@@ -46,6 +49,6 @@ public class CameraShakeScript : MonoBehaviour {
 		_shakeYSpeed = ySpeed;
 		
 		_shake = true;
-		_counter = 60;
+		_counter = Counter;
 	}
 }
