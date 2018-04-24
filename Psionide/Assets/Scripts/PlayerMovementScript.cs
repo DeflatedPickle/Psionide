@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovementScript : MonoBehaviour {
 	[Range(0, 30)]
-	public float Speed = 10;
+	public float Speed = 17;
 
 	private bool _isMoving = false;
 	private Vector3 _originalPositon;
@@ -47,7 +47,7 @@ public class PlayerMovementScript : MonoBehaviour {
 				_newDirection = new Vector3(Mathf.Sin(angle), 0, 0);
 
 				if (_oldDirection.x >= 0.1 && _newDirection.x >= 0.1 || _oldDirection.x <= -0.1 && _newDirection.x <= -0.1) {
-					Debug.Log("Same direction!");
+					// Debug.Log("Same direction!");
 					_newDirection = new Vector3(-Mathf.Sin(angle), 0, 0);
 				}
 
