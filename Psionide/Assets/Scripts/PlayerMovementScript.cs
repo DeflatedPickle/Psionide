@@ -61,7 +61,7 @@ public class PlayerMovementScript : MonoBehaviour {
                 // Debug.Log(angle);
                 // Debug.Log(_newDirection);
 
-                _newPosition = RaycastScript.RayHitPoint(mousePosition, _newDirection);
+                _newPosition = Util.RayHitPoint(mousePosition, _newDirection);
 
                 if (_newPosition != new Vector3(0, 0, 0)) {
                     _isMoving = true;
