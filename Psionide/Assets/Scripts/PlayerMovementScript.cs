@@ -63,7 +63,9 @@ public class PlayerMovementScript : MonoBehaviour {
 
                 _newPosition = RaycastScript.RayHitPoint(mousePosition, _newDirection);
 
-                _isMoving = true;
+                if (_newPosition != new Vector3(0, 0, 0)) {
+                    _isMoving = true;
+                }
                 
                 transform.rotation = Quaternion.Euler(0f, 0f, angle);
             }
@@ -83,23 +85,34 @@ public class PlayerMovementScript : MonoBehaviour {
             if (other.gameObject.CompareTag("Wall")) {
                 Debug.Log("Hit a wall!");
 
-                if (direction.x > 0f) {
-                    Debug.Log("Hit the right side!");
-
-                    transform.rotation = Quaternion.Euler(0f, 0f, 90f);
-                } else if (direction.x < 0f) {
-                    Debug.Log("Hit the left side!");
-
-                    transform.rotation = Quaternion.Euler(0f, 0f, -90f);
-                }
-
-                if (direction.y > 0f) {
-                    Debug.Log("Hit the top side!");
-                } else if (direction.y < 0f) {
-                    Debug.Log("Hit the bottom side!");
+                switch (Util.CollidedSide(other, transform)) {
+                    case "right": 
+                        Debug.Log("Hit the right side!");
+                        transform.rotation = Quaternion.Euler(0f, 0f, 90f);
+                        break;
+                        
+                    case "left":
+                        Debug.Log("Hit the left side!");
+                        transform.rotation = Quaternion.Euler(0f, 0f, -90f);
+                        break;
+                        
+                    case "up":
+                        Debug.Log("Hit the top side!");
+                        break;
+                        
+                    case "down":
+                        Debug.Log("Hit the bottom side!");
+                        break;
+                        
+                    default:
+                        transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+                        break;
                 }
 
                 _cameraShake.Shake(x: 0.2f, y: 0.2f);
+            }
+            else if (other.gameObject.CompareTag("WallTrigger")) {
+                
             }
         }
         

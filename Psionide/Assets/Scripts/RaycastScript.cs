@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class RaycastScript : MonoBehaviour {
 	public static RaycastHit2D RayHitTarget(Vector3 position, Vector3 direction) {
-		var hit = Physics2D.Raycast(position, direction, Single.MaxValue);
+		var hit = Physics2D.Raycast(position, direction, float.MaxValue);
 
 		return hit;
 	}
