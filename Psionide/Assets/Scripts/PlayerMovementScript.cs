@@ -111,9 +111,6 @@ public class PlayerMovementScript : MonoBehaviour {
 
                 _cameraShake.Shake(x: 0.2f, y: 0.2f);
             }
-            else if (other.gameObject.CompareTag("WallTrigger")) {
-                
-            }
         }
         
         _isMoving = false;
