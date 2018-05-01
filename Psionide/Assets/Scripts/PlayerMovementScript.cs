@@ -63,7 +63,7 @@ public class PlayerMovementScript : MonoBehaviour {
 
                 _newPosition = Util.RayHitPoint(mousePosition, _newDirection);
 
-                if (_newPosition != new Vector3(0, 0, 0)) {
+                if (_newPosition != _originalPositon) {
                     _isMoving = true;
                 }
                 

@@ -10,7 +10,7 @@ public class OctetAI : MonoBehaviour {
 	}
 
 	private void Update() {
-		_moveTowards.Speed = 1.5f;
+		_moveTowards.Speed = 2f;
 		_moveTowards.Target = GameObject.Find("PlayerPrefab").transform;
 	}
 }
