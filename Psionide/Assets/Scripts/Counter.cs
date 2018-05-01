@@ -2,51 +2,55 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Counter : MonoBehaviour {
+public class Counter {
 	public static float Max = 60f;
 	public float Step = 1f;
 
 	public bool Stopped = false;
 	public string CountDirection = "down";
 
-	private float _current;
+	public float Value;
 
-	public Counter(float max, float step, string direction) {
+	public Counter(float max, float step = 1, string direction = "down") {
 		Max = max;
 		Step = step;
 		CountDirection = direction;
+		
+		Reset();
+	}
+
+	public void Update () {
+		// Debug.Log(Value);
 
 		switch (CountDirection) {
-			case "down":
-				_current = Max;
+			case "down": 
+				if (Value >= 0) {
+					Value -= Step;
+				}
+				else {
+					Stopped = true;
+				}
 				break;
 				
 			case "up":
-				_current = 0;
+				if (Value <= Max) {
+					Value += Step;
+				}
+				else {
+					Stopped = true;
+				}
 				break;
 		}
 	}
 
-	void Update () {
-		Debug.Log(_current);
-
+	public void Reset() {
 		switch (CountDirection) {
-			case "down": 
-				if (_current > 0) {
-					_current -= Step;
-				}
-				else {
-					Stopped = true;
-				}
+			case "down":
+				Value = Max;
 				break;
 				
 			case "up":
-				if (_current < 0) {
-					_current += Step;
-				}
-				else {
-					Stopped = true;
-				}
+				Value = 0;
 				break;
 		}
 	}
