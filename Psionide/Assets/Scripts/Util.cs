@@ -15,6 +15,8 @@ public class Util : MonoBehaviour {
 		if (hit.collider != null) {
 			return hit.collider.transform.position;
 		}
+		
+		Debug.Log("Did not hit!");
         
 		return new Vector3(0, 0, 0);
 	}

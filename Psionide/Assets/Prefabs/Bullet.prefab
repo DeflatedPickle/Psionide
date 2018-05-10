@@ -9,60 +9,43 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1177152643778756}
+  m_RootGameObject: {fileID: 1300944175175964}
   m_IsPrefabParent: 1
---- !u!1 &1177152643778756
+--- !u!1 &1300944175175964
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4387097461143616}
-  - component: {fileID: 212908085523805422}
-  - component: {fileID: 114664309698568264}
+  - component: {fileID: 4772553305129162}
+  - component: {fileID: 212940677932070546}
   m_Layer: 0
-  m_Name: Mega
+  m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4387097461143616
+--- !u!4 &4772553305129162
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1177152643778756}
+  m_GameObject: {fileID: 1300944175175964}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5, y: -2, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114664309698568264
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1177152643778756}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afefe5640db321a4ea3853882ce457d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Target: {fileID: 4695860143739840, guid: 5b15ee84e806fd84d8be8f24c166b635, type: 2}
-  Bullet: {fileID: 4772553305129162, guid: 7e2b95e416fb11c4d81743ba86debf00, type: 2}
-  BulletSpeed: 2
-  Inaccuracy: 0
-  Interval: 15
---- !u!212 &212908085523805422
+--- !u!212 &212940677932070546
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1177152643778756}
+  m_GameObject: {fileID: 1300944175175964}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -92,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300024, guid: d9d6ed03243b2e240a5abb8815b2e66e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7232ddfce1bb4114882aaca45567c447, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
