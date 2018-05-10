@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4387097461143616}
   - component: {fileID: 212908085523805422}
   - component: {fileID: 114664309698568264}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Mega
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53,6 +53,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 4695860143739840, guid: 5b15ee84e806fd84d8be8f24c166b635, type: 2}
+  Shooter: {fileID: 0}
   Bullet: {fileID: 4772553305129162, guid: 7e2b95e416fb11c4d81743ba86debf00, type: 2}
   BulletSpeed: 2
   Inaccuracy: 0
