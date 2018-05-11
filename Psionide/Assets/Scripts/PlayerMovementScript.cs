@@ -36,13 +36,32 @@ public class PlayerMovementScript : MonoBehaviour {
         var touches = Input.touches;
 
         if (!_isMoving) {
+            // TODO: Move mouse and touch movement to a single static function in the Util class
             if (touches.Length == 1) {
                 _isMoving = true;
                 var mainFinger = touches[0];
 
                 if (mainFinger.phase == TouchPhase.Began) {
-                    // _newPosition = mainFinger.position;
+                    var fingerPosition = Camera.main.ScreenToWorldPoint(mainFinger.position);
                     // _newPosition = RaycastScript.RayHitPoint(mainFinger.position);
+
+                    var cameraCenter = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2, Camera.main.nearClipPlane));
+                    var angle = Vector3.Angle(cameraCenter, fingerPosition);
+                    _newDirection = new Vector3(Mathf.Sin(angle), 0, 0);
+
+                    if (_oldDirection.x >= 0.1 && _newDirection.x >= 0.1 ||
+                        _oldDirection.x <= -0.1 && _newDirection.x <= -0.1) {
+                        // Debug.Log("Same direction!");
+                        _newDirection = new Vector3(-Mathf.Sin(angle), 0, 0);
+                    }
+
+                    _newPosition = Util.RayHitPoint(fingerPosition, _newDirection);
+
+                    if (_newPosition != _originalPositon) {
+                        _isMoving = true;
+                    }
+                
+                    transform.rotation = Quaternion.Euler(0f, 0f, angle);
                 }
             }
             else if (Input.GetMouseButtonDown(0)) {
