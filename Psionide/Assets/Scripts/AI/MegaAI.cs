@@ -13,7 +13,11 @@ public class MegaAI : MonoBehaviour {
 		_shootAt.Target = GameObject.Find("PlayerPrefab").transform;
 		_shootAt.Shooter = transform;
 		_shootAt.Bullet = Bullet;
-		_shootAt.BulletSpeed = 3.5f;
+		_shootAt.BulletSpeed = 5f;
 		_shootAt.Interval = 150f;
+	}
+
+	private void Update() {
+		Debug.DrawLine(transform.position, _shootAt.Target.position, Color.red);
 	}
 }

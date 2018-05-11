@@ -28,10 +28,11 @@ public class ShootAt : MonoBehaviour {
             var rotation = Quaternion.Euler(0, 0, angle);
             
             var bullet = Instantiate(Bullet, transform.position, rotation);
-            var bulletShoot = bullet.gameObject.GetComponent<BulletScript>();
-            bulletShoot.Target = Target;
-            bulletShoot.Shooter = Shooter;
-            bulletShoot.BulletSpeed = BulletSpeed;
+            
+            var direction = Target.position - transform.position;
+            direction.Normalize();
+            
+            bullet.GetComponent<Rigidbody2D>().velocity = direction * BulletSpeed;
             
             _intervalCounter.Reset();
         }
