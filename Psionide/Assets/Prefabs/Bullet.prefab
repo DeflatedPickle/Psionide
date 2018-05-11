@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 61261956352521120}
   m_Layer: 2
   m_Name: Bullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,9 +99,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65e8a613fae0edd4ea359fb951528d10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Target: {fileID: 4695860143739840, guid: 5b15ee84e806fd84d8be8f24c166b635, type: 2}
-  Shooter: {fileID: 0}
-  BulletSpeed: 5
 --- !u!212 &212940677932070546
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -115,7 +112,6 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:

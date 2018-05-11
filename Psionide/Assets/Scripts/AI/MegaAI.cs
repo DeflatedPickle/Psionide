@@ -25,7 +25,9 @@ public class MegaAI : MonoBehaviour {
 		if (_deathCounter.Value <= 0) {
 			Destroy(gameObject);
 		}
-		
-		Debug.DrawLine(transform.position, _shootAt.Target.position, Color.red);
+
+		if (_shootAt.Target != null) {
+			Debug.DrawLine(transform.position, _shootAt.Target.position, Color.red);
+		}
 	}
 }
