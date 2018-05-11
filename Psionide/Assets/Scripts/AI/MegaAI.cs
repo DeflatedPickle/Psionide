@@ -6,6 +6,8 @@ public class MegaAI : MonoBehaviour {
 	public Transform Bullet;
 	
 	private ShootAt _shootAt;
+
+	private Counter _deathCounter = new Counter(500);
 	
 	private void Awake() {
 		_shootAt = gameObject.AddComponent<ShootAt>();
@@ -18,6 +20,12 @@ public class MegaAI : MonoBehaviour {
 	}
 
 	private void Update() {
+		_deathCounter.Update();
+
+		if (_deathCounter.Value <= 0) {
+			Destroy(gameObject);
+		}
+		
 		Debug.DrawLine(transform.position, _shootAt.Target.position, Color.red);
 	}
 }
