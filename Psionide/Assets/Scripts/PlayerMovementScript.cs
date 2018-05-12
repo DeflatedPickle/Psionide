@@ -145,7 +145,7 @@ public class PlayerMovementScript : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if (other.gameObject.CompareTag("Bullet")) {
+        if (other.gameObject.CompareTag("ContactDamage")) {
             Destroy(gameObject);
             GameObject.Find("Canvas").transform.Find("DeathMenu").gameObject.SetActive(true);
         }

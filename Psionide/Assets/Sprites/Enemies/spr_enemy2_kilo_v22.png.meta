@@ -1,37 +1,33 @@
 fileFormatVersion: 2
-guid: d9d6ed03243b2e240a5abb8815b2e66e
+guid: a895411d48059a84aa5189872aedff57
+timeCreated: 1526131328
+licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: spr_enemy4_mega2_0
-    21300002: spr_enemy4_mega2_1
-    21300004: spr_enemy4_mega2_2
-    21300006: spr_enemy4_mega2_3
-    21300008: spr_enemy4_mega2_4
-    21300010: spr_enemy4_mega2_5
-    21300012: spr_enemy4_mega2_6
-    21300014: spr_enemy4_mega2_7
-    21300016: spr_enemy4_mega2_8
-    21300018: spr_enemy4_mega2_9
-    21300020: spr_enemy4_mega2_10
-    21300022: spr_enemy4_mega2_11
-    21300024: spr_enemy4_mega2_12
-    21300026: spr_enemy4_mega2_13
-    21300028: spr_enemy4_mega2_14
-    21300030: spr_enemy4_mega2_15
-    21300032: spr_enemy4_mega2_16
-    21300034: spr_enemy4_mega2_17
-    21300036: spr_enemy4_mega2_18
-    21300038: spr_enemy4_mega2_19
-    21300040: spr_enemy4_mega2_20
-    21300042: spr_enemy4_mega2_21
-    21300044: spr_enemy4_mega2_22
-    21300046: spr_enemy4_mega2_23
-    21300048: spr_enemy4_mega2_24
-    21300050: spr_enemy4_mega2_25
-    21300052: spr_enemy4_mega2_26
-    21300054: spr_enemy4_mega2_27
-    21300056: spr_enemy4_mega2_28
-    21300058: spr_enemy4_mega2_29
+    21300000: spr_enemy2_kilo_v22_0
+    21300002: spr_enemy2_kilo_v22_1
+    21300004: spr_enemy2_kilo_v22_2
+    21300006: spr_enemy2_kilo_v22_3
+    21300008: spr_enemy2_kilo_v22_4
+    21300010: spr_enemy2_kilo_v22_5
+    21300012: spr_enemy2_kilo_v22_6
+    21300014: spr_enemy2_kilo_v22_7
+    21300016: spr_enemy2_kilo_v22_8
+    21300018: spr_enemy2_kilo_v22_9
+    21300020: spr_enemy2_kilo_v22_10
+    21300022: spr_enemy2_kilo_v22_11
+    21300024: spr_enemy2_kilo_v22_12
+    21300026: spr_enemy2_kilo_v22_13
+    21300028: spr_enemy2_kilo_v22_14
+    21300030: spr_enemy2_kilo_v22_15
+    21300032: spr_enemy2_kilo_v22_16
+    21300034: spr_enemy2_kilo_v22_17
+    21300036: spr_enemy2_kilo_v22_18
+    21300038: spr_enemy2_kilo_v22_19
+    21300040: spr_enemy2_kilo_v22_20
+    21300042: spr_enemy2_kilo_v22_21
+    21300044: spr_enemy2_kilo_v22_22
+    21300046: spr_enemy2_kilo_v22_23
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -88,7 +84,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -98,7 +94,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -108,17 +104,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-  - buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -128,7 +114,17 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -138,7 +134,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -148,7 +144,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -158,77 +154,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spr_enemy4_mega2_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 160
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: spr_enemy4_mega2_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 160
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: spr_enemy4_mega2_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 160
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: spr_enemy4_mega2_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 160
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: spr_enemy4_mega2_4
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 160
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: spr_enemy4_mega2_5
+      name: spr_enemy2_kilo_v22_0
       rect:
         serializedVersion: 2
         x: 0
@@ -242,7 +168,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: spr_enemy4_mega2_6
+      name: spr_enemy2_kilo_v22_1
       rect:
         serializedVersion: 2
         x: 32
@@ -256,7 +182,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: spr_enemy4_mega2_7
+      name: spr_enemy2_kilo_v22_2
       rect:
         serializedVersion: 2
         x: 64
@@ -270,7 +196,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: spr_enemy4_mega2_8
+      name: spr_enemy2_kilo_v22_3
       rect:
         serializedVersion: 2
         x: 96
@@ -284,7 +210,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: spr_enemy4_mega2_9
+      name: spr_enemy2_kilo_v22_4
       rect:
         serializedVersion: 2
         x: 128
@@ -298,7 +224,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: spr_enemy4_mega2_10
+      name: spr_enemy2_kilo_v22_5
       rect:
         serializedVersion: 2
         x: 0
@@ -312,7 +238,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: spr_enemy4_mega2_11
+      name: spr_enemy2_kilo_v22_6
       rect:
         serializedVersion: 2
         x: 32
@@ -326,7 +252,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: spr_enemy4_mega2_12
+      name: spr_enemy2_kilo_v22_7
       rect:
         serializedVersion: 2
         x: 64
@@ -340,7 +266,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: spr_enemy4_mega2_13
+      name: spr_enemy2_kilo_v22_8
       rect:
         serializedVersion: 2
         x: 96
@@ -354,7 +280,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: spr_enemy4_mega2_14
+      name: spr_enemy2_kilo_v22_9
       rect:
         serializedVersion: 2
         x: 128
@@ -368,7 +294,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: spr_enemy4_mega2_15
+      name: spr_enemy2_kilo_v22_10
       rect:
         serializedVersion: 2
         x: 0
@@ -382,7 +308,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: spr_enemy4_mega2_16
+      name: spr_enemy2_kilo_v22_11
       rect:
         serializedVersion: 2
         x: 32
@@ -396,7 +322,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: spr_enemy4_mega2_17
+      name: spr_enemy2_kilo_v22_12
       rect:
         serializedVersion: 2
         x: 64
@@ -410,7 +336,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: spr_enemy4_mega2_18
+      name: spr_enemy2_kilo_v22_13
       rect:
         serializedVersion: 2
         x: 96
@@ -424,7 +350,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: spr_enemy4_mega2_19
+      name: spr_enemy2_kilo_v22_14
       rect:
         serializedVersion: 2
         x: 128
@@ -438,7 +364,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: spr_enemy4_mega2_20
+      name: spr_enemy2_kilo_v22_15
       rect:
         serializedVersion: 2
         x: 0
@@ -452,7 +378,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: spr_enemy4_mega2_21
+      name: spr_enemy2_kilo_v22_16
       rect:
         serializedVersion: 2
         x: 32
@@ -466,7 +392,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: spr_enemy4_mega2_22
+      name: spr_enemy2_kilo_v22_17
       rect:
         serializedVersion: 2
         x: 64
@@ -480,7 +406,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: spr_enemy4_mega2_23
+      name: spr_enemy2_kilo_v22_18
       rect:
         serializedVersion: 2
         x: 96
@@ -494,7 +420,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: spr_enemy4_mega2_24
+      name: spr_enemy2_kilo_v22_19
       rect:
         serializedVersion: 2
         x: 128
@@ -508,7 +434,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: spr_enemy4_mega2_25
+      name: spr_enemy2_kilo_v22_20
       rect:
         serializedVersion: 2
         x: 0
@@ -522,7 +448,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: spr_enemy4_mega2_26
+      name: spr_enemy2_kilo_v22_21
       rect:
         serializedVersion: 2
         x: 32
@@ -536,7 +462,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: spr_enemy4_mega2_27
+      name: spr_enemy2_kilo_v22_22
       rect:
         serializedVersion: 2
         x: 64
@@ -550,24 +476,10 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: spr_enemy4_mega2_28
+      name: spr_enemy2_kilo_v22_23
       rect:
         serializedVersion: 2
         x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: spr_enemy4_mega2_29
-      rect:
-        serializedVersion: 2
-        x: 128
         y: 0
         width: 32
         height: 32

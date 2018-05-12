@@ -3878,6 +3878,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b0c346cc4472174db67312716f1a63c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KiloPrefab: {fileID: 4710055451140564, guid: 256a6d428aeee994f88311e2577c9f8f, type: 2}
   MegaPrefab: {fileID: 4387097461143616, guid: f26863d1b026d044eae410543b8c5523, type: 2}
 --- !u!4 &1866108350
 Transform:

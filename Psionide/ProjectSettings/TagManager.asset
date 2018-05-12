@@ -6,8 +6,8 @@ TagManager:
   tags:
   - Wall
   - WallTrigger
-  - Bullet
   - DeathMenu
+  - ContactDamage
   layers:
   - Default
   - TransparentFX
