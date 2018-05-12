@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4387097461143616}
   - component: {fileID: 212908085523805422}
   - component: {fileID: 114356656622531230}
+  - component: {fileID: 95045004356342278}
   m_Layer: 2
   m_Name: Mega
   m_TagString: Untagged
@@ -41,6 +42,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &95045004356342278
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1177152643778756}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9373264bebb5b4147904a476ad1e9b60, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114356656622531230
 MonoBehaviour:
   m_ObjectHideFlags: 1
