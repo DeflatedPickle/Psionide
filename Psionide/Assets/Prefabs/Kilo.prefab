@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212234743659881218}
   - component: {fileID: 114891314645639636}
   - component: {fileID: 61779749528467868}
+  - component: {fileID: 95816151994004786}
   m_Layer: 2
   m_Name: Kilo
   m_TagString: ContactDamage
@@ -67,6 +68,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!95 &95816151994004786
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1654850443395698}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bc4c1e8b523066746b544e26307489b5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114891314645639636
 MonoBehaviour:
   m_ObjectHideFlags: 1
