@@ -16,9 +16,11 @@ public class PlayerMovementScript : MonoBehaviour {
 
     private Rigidbody2D _rigidbody2D;
     private CameraShakeScript _cameraShake;
+    private Animator _animator;
 
     private void Awake() {
         _rigidbody2D = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
 
         _cameraShake = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraShakeScript>();
     }
@@ -38,7 +40,7 @@ public class PlayerMovementScript : MonoBehaviour {
         if (!_isMoving) {
             // TODO: Move mouse and touch movement to a single static function in the Util class
             if (touches.Length == 1) {
-                _isMoving = true;
+                _animator.SetTrigger("PlayerJump");
                 var mainFinger = touches[0];
 
                 if (mainFinger.phase == TouchPhase.Began) {
@@ -65,6 +67,7 @@ public class PlayerMovementScript : MonoBehaviour {
                 }
             }
             else if (Input.GetMouseButtonDown(0)) {
+                _animator.SetTrigger("PlayerJump");
                 var mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
                 var cameraCenter = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2, Camera.main.nearClipPlane));
@@ -98,11 +101,10 @@ public class PlayerMovementScript : MonoBehaviour {
     }
 
     void OnCollisionEnter2D(Collision2D other) {
-        var direction = transform.InverseTransformDirection(other.transform.position);
-        
         if (_canCollide) {
             if (other.gameObject.CompareTag("Wall")) {
                 Debug.Log("Hit a wall!");
+                _animator.SetTrigger("PlayerLand");
 
                 switch (Util.CollidedSide(other, transform)) {
                     case "right": 
@@ -145,6 +147,8 @@ public class PlayerMovementScript : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
+        transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+        
         if (other.gameObject.CompareTag("ContactDamage")) {
             Destroy(gameObject);
             GameObject.Find("Canvas").transform.Find("DeathMenu").gameObject.SetActive(true);

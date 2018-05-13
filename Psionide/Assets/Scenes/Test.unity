@@ -1256,6 +1256,7 @@ GameObject:
   - component: {fileID: 945206875}
   - component: {fileID: 945206881}
   - component: {fileID: 945206880}
+  - component: {fileID: 945206882}
   m_Layer: 2
   m_Name: PlayerPrefab
   m_TagString: Player
@@ -1276,10 +1277,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.004653707, y: 0.057828277}
+  m_Offset: {x: 0.0023464859, y: -0.046861827}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.3}
+    pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
@@ -1287,7 +1288,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.808866, y: 0.7172462}
+  m_Size: {x: 0.8780828, y: 0.9266263}
   m_EdgeRadius: 0
 --- !u!50 &945206876
 Rigidbody2D:
@@ -1301,7 +1302,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 0.5801561
+  m_Mass: 0.81365466
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
@@ -1366,7 +1367,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!4 &945206879
 Transform:
@@ -1483,6 +1484,24 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
+--- !u!95 &945206882
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 95354524239111398, guid: 5b15ee84e806fd84d8be8f24c166b635,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 945206874}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 977cc04f53063a34fa43ccc47437650b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!4 &953889146 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4611921294613592, guid: 063a31ec0bcbd9144b34f96c13b86b8f,
