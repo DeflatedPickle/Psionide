@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 50488282216760618}
   - component: {fileID: 114185605573742112}
   - component: {fileID: 61261956352521120}
+  - component: {fileID: 95428270761248982}
   m_Layer: 2
   m_Name: Bullet
   m_TagString: ContactDamage
@@ -88,6 +89,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!95 &95428270761248982
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1300944175175964}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f63d049dc59857c44b733754da25c15e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114185605573742112
 MonoBehaviour:
   m_ObjectHideFlags: 1
