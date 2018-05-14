@@ -25,7 +25,9 @@ public class ShootAt : MonoBehaviour {
     }
 
     private void Update() {
-        _intervalCounter.Update();
+        if (!Util.IsDead) {
+            _intervalCounter.Update();
+        }
 
         if (_intervalCounter.Value <= 0) {
             Debug.Log("Shooting");
