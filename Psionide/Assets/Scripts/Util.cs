@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Util : MonoBehaviour {
+	public static bool IsDead = false;
+	
 	public static RaycastHit2D RayHitTarget(Vector3 position, Vector3 direction) {
 		var hit = Physics2D.Raycast(position, direction, float.MaxValue);
 

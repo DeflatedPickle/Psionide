@@ -10,8 +10,10 @@ public class SpawnManager : MonoBehaviour {
 	private readonly Counter _megaCounter = new Counter(800);
 
 	void Update () {
-		_kiloCounter.Update();
-		_megaCounter.Update();
+		if (!Util.IsDead) {
+			_kiloCounter.Update();
+			_megaCounter.Update();
+		}
 
 		if (_megaCounter.Value <= 0) {
 			Instantiate(MegaPrefab, new Vector3(Random.Range(-7f, 7f), Random.Range(-4f, 4f)), Quaternion.Euler(0, 0, 0));

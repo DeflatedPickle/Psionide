@@ -26,7 +26,9 @@ public class MegaAI : MonoBehaviour {
 	}
 
 	private void Update() {
-		_deathCounter.Update();
+		if (!Util.IsDead) {
+			_deathCounter.Update();
+		}
 
 		if (_deathCounter.Value <= 0) {
 			// _animator.SetTrigger("MegaDeath");

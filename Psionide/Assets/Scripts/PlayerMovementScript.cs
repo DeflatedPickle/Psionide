@@ -147,9 +147,12 @@ public class PlayerMovementScript : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
+        Debug.Log(string.Format("Hit: {0}", other.name));
+        
         transform.rotation = Quaternion.Euler(0f, 0f, 0f);
         
         if (other.gameObject.CompareTag("ContactDamage")) {
+            Util.IsDead = true;
             Destroy(gameObject);
             GameObject.Find("Canvas").transform.Find("DeathMenu").gameObject.SetActive(true);
         }
