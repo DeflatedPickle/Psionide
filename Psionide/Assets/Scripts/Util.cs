@@ -23,8 +23,17 @@ public class Util : MonoBehaviour {
 		return new Vector3(0, 0, 0);
 	}
 
-	public static string CollidedSide(Collision2D collision2D, Transform transform) {
-		var direction = transform.InverseTransformDirection(collision2D.transform.position);
+	public static string CollidedSide<T>(T collision, Transform transform) {
+		Vector2 direction;
+		if (typeof(T) == typeof(Collider2D)) {
+			var collision2D = (Collider2D) (object) collision;
+			direction = transform.InverseTransformDirection(collision2D.transform.position);
+		}
+		else {
+			var collision2D = (Collision2D) (object) collision;
+			direction = transform.InverseTransformDirection(collision2D.transform.position);
+		}
+		
 		
 		if (direction.x > 0f) {
 			return "right";
