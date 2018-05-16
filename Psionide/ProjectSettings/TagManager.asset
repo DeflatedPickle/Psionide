@@ -8,6 +8,10 @@ TagManager:
   - WallTrigger
   - DeathMenu
   - ContactDamage
+  - LeftWall
+  - RightWall
+  - UpWall
+  - DownWall
   layers:
   - Default
   - TransparentFX

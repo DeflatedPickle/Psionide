@@ -102,7 +102,7 @@ public class PlayerMovementScript : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D other) {
         if (_canCollide) {
-            if (other.gameObject.CompareTag("Wall")) {
+            if (Util.IsWall(other.gameObject)) {
                 Debug.Log("Hit a wall!");
                 _animator.SetTrigger("PlayerLand");
 
@@ -119,10 +119,12 @@ public class PlayerMovementScript : MonoBehaviour {
                         
                     case "up":
                         Debug.Log("Hit the top side!");
+                        transform.rotation = Quaternion.Euler(0f, 0f, -180f);
                         break;
                         
                     case "down":
                         Debug.Log("Hit the bottom side!");
+                        transform.rotation = Quaternion.Euler(0f, 0f, 0f);
                         break;
                         
                     default:
