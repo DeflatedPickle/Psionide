@@ -42,31 +42,39 @@ public class PlayerMovementScript : MonoBehaviour {
             // TODO: Move mouse and touch movement to a single static function in the Util class
             if (touches.Length == 1) {
                 _animator.SetTrigger("PlayerJump");
-                _mobilePressed = true;
+                var mainFinger = touches[0];
+
+                if (mainFinger.phase == TouchPhase.Began) {
+                    var fingerPosition = Camera.main.ScreenToWorldPoint(mainFinger.position);
+                    // _newPosition = RaycastScript.RayHitPoint(mainFinger.position);
+
+                    var cameraCenter = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2, Camera.main.nearClipPlane));
+                    var angle = Vector3.Angle(cameraCenter, fingerPosition);
+                    _newDirection = new Vector3(Mathf.Sin(angle), 0, 0);
+
+                    if (_oldDirection.x >= 0.1 && _newDirection.x >= 0.1 ||
+                        _oldDirection.x <= -0.1 && _newDirection.x <= -0.1) {
+                        // Debug.Log("Same direction!");
+                        _newDirection = new Vector3(-Mathf.Sin(angle), 0, 0);
+                    }
+
+                    _newPosition = Util.RayHitPoint(fingerPosition, _newDirection);
+
+                    if (_newPosition != _originalPositon) {
+                        _isMoving = true;
+                    }
+                
+                    transform.rotation = Quaternion.Euler(0f, 0f, angle);
+                }
+
+                _mobilePressed = false;
             }
             else if (Input.GetMouseButtonDown(0)) {
                 _animator.SetTrigger("PlayerJump");
-                _mousePressed = true;
-            }
-        }
-
-        // Debug.Log(RaycastScript.RayHitTarget(_originalPositon, _newDirection).collider.transform.position);
-    }
-
-    private void FixedUpdate() {
-        var step = Speed * Time.deltaTime;
-        
-        if (_mobilePressed) {
-            var touches = Input.touches;
-            
-            var mainFinger = touches[0];
-
-            if (mainFinger.phase == TouchPhase.Began) {
-                var fingerPosition = Camera.main.ScreenToWorldPoint(mainFinger.position);
-                // _newPosition = RaycastScript.RayHitPoint(mainFinger.position);
+                var mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
                 var cameraCenter = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2, Camera.main.nearClipPlane));
-                var angle = Vector3.Angle(cameraCenter, fingerPosition);
+                var angle = Vector3.Angle(cameraCenter, mousePosition);
                 _newDirection = new Vector3(Mathf.Sin(angle), 0, 0);
 
                 if (_oldDirection.x >= 0.1 && _newDirection.x >= 0.1 ||
@@ -75,44 +83,26 @@ public class PlayerMovementScript : MonoBehaviour {
                     _newDirection = new Vector3(-Mathf.Sin(angle), 0, 0);
                 }
 
-                _newPosition = Util.RayHitPoint(fingerPosition, _newDirection);
+                // Debug.Log(angle);
+                // Debug.Log(_newDirection);
+
+                _newPosition = Util.RayHitPoint(mousePosition, _newDirection);
 
                 if (_newPosition != _originalPositon) {
                     _isMoving = true;
                 }
                 
                 transform.rotation = Quaternion.Euler(0f, 0f, angle);
-            }
-
-            _mobilePressed = false;
-        }
-
-        if (_mousePressed) {
-            var mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-            var cameraCenter = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2, Camera.main.nearClipPlane));
-            var angle = Vector3.Angle(cameraCenter, mousePosition);
-            _newDirection = new Vector3(Mathf.Sin(angle), 0, 0);
-
-            if (_oldDirection.x >= 0.1 && _newDirection.x >= 0.1 ||
-                _oldDirection.x <= -0.1 && _newDirection.x <= -0.1) {
-                // Debug.Log("Same direction!");
-                _newDirection = new Vector3(-Mathf.Sin(angle), 0, 0);
-            }
-
-            // Debug.Log(angle);
-            // Debug.Log(_newDirection);
-
-            _newPosition = Util.RayHitPoint(mousePosition, _newDirection);
-
-            if (_newPosition != _originalPositon) {
-                _isMoving = true;
-            }
-                
-            transform.rotation = Quaternion.Euler(0f, 0f, angle);
             
-            _mousePressed = false;
+                _mousePressed = false;
+            }
         }
+
+        // Debug.Log(RaycastScript.RayHitTarget(_originalPositon, _newDirection).collider.transform.position);
+    }
+
+    private void FixedUpdate() {
+        var step = Speed * Time.deltaTime;
 
         if (_isMoving) {
             transform.position = Vector3.MoveTowards(transform.position, _newPosition, step);
