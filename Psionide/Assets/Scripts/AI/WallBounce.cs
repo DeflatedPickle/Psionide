@@ -22,7 +22,7 @@ public class WallBounce : MonoBehaviour {
 		// _rigidbody2D.velocity = _direction * Speed;
 		// _rigidbody2D.AddForce(_direction * Speed);
 		
-		var directionList = new List<Vector2> {Vector2.left, Vector2.right, Vector2.up, Vector2.down};
+		var directionList = new List<Vector2> {new Vector2(-1, -1), new Vector2(-1, 1), new Vector2(1, 1), new Vector2(1, -1)};
 		var choice = Random.Range(0, directionList.Count);
 		
 		_rigidbody2D.AddForce(directionList[choice] * Speed, ForceMode2D.Impulse);

@@ -81,8 +81,16 @@ public class Util : MonoBehaviour {
 
 		if (transform.position.y < 0) {
 			rigidbody2D.AddForce(Vector2.up * speed, ForceMode2D.Impulse);
-		} else {
+		}
+		else {
 			rigidbody2D.AddForce(Vector2.down * speed, ForceMode2D.Impulse);
+		}
+
+		if (transform.position.x < 0) {
+			rigidbody2D.AddForce(Vector2.right * speed, ForceMode2D.Impulse);
+		}
+		else {
+			rigidbody2D.AddForce(Vector2.left * speed, ForceMode2D.Impulse);
 		}
 	}
 
