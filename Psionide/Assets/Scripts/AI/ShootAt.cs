@@ -25,7 +25,7 @@ public class ShootAt : MonoBehaviour {
     }
 
     private void Update() {
-        if (!Util.IsDead) {
+        if (!Util.IsPaused) {
             _intervalCounter.Update();
         }
 

@@ -10,7 +10,7 @@ public class BulletScript : MonoBehaviour {
 	}
 
 	private void OnTriggerEnter2D(Collider2D other) {
-		if (other.gameObject.CompareTag("Wall") || other.gameObject.CompareTag("Player")) {
+		if (Util.IsWall(other.gameObject) || other.gameObject.CompareTag("Player")) {
 			_cameraShake.Shake(x: 0.2f, y: 0.2f);
 			Destroy(gameObject);
 		}

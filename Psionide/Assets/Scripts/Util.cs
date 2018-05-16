@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Util : MonoBehaviour {
-	public static bool IsDead = false;
+	public static bool IsPaused = false;
 	
 	public static RaycastHit2D RayHitTarget(Vector3 position, Vector3 direction) {
 		var hit = Physics2D.Raycast(position, direction, float.MaxValue);
@@ -84,5 +84,17 @@ public class Util : MonoBehaviour {
 		} else {
 			rigidbody2D.AddForce(Vector2.down * speed, ForceMode2D.Impulse);
 		}
+	}
+
+	public void TriggerPauseMenu() {
+		if (IsPaused) {
+			IsPaused = false;
+		}
+		else {
+			IsPaused = true;
+		}
+		
+		GameObject.Find("Canvas").transform.Find("PauseMenu").gameObject.SetActive(IsPaused);
+		GameObject.Find("Canvas").transform.Find("Pause").gameObject.SetActive(!IsPaused);
 	}
 }

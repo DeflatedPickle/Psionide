@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneSwitcher : MonoBehaviour {
 	public void LoadScene(string scene) {
-		Util.IsDead = false;
+		Util.IsPaused = false;
 		SceneManager.LoadScene(scene);
 	}
 

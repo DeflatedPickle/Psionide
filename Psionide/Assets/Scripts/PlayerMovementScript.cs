@@ -38,7 +38,7 @@ public class PlayerMovementScript : MonoBehaviour {
 
         var touches = Input.touches;
 
-        if (!_isMoving) {
+        if (!_isMoving && !Util.IsPaused) {
             // TODO: Move mouse and touch movement to a single static function in the Util class
             if (touches.Length == 1) {
                 _animator.SetTrigger("PlayerJump");
@@ -174,7 +174,7 @@ public class PlayerMovementScript : MonoBehaviour {
         transform.rotation = Quaternion.Euler(0f, 0f, 0f);
         
         if (other.gameObject.CompareTag("ContactDamage")) {
-            Util.IsDead = true;
+            Util.IsPaused = true;
             Destroy(gameObject);
             GameObject.Find("Canvas").transform.Find("DeathMenu").gameObject.SetActive(true);
         }

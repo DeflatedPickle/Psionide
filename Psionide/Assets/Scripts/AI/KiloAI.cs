@@ -16,7 +16,7 @@ public class KiloAI : MonoBehaviour {
 	}
 
 	private void Update() {
-		if (!Util.IsDead) {
+		if (!Util.IsPaused) {
 			_deathCounter.Update();
 		}
 
