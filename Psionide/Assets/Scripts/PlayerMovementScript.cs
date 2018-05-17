@@ -114,26 +114,26 @@ public class PlayerMovementScript : MonoBehaviour {
         
         if (_canCollide) {
             if (Util.IsWall(other.gameObject)) {
-                Debug.Log("Hit a wall!");
+                // Debug.Log("Hit a wall!");
 
                 switch (Util.CollidedSide(other, transform)) {
                     case "right": 
-                        Debug.Log("Hit the right side!");
+                        // Debug.Log("Hit the right side!");
                         transform.rotation = Quaternion.Euler(0f, 0f, 90f);
                         break;
                         
                     case "left":
-                        Debug.Log("Hit the left side!");
+                        // Debug.Log("Hit the left side!");
                         transform.rotation = Quaternion.Euler(0f, 0f, -90f);
                         break;
                         
                     case "up":
-                        Debug.Log("Hit the top side!");
+                        // Debug.Log("Hit the top side!");
                         transform.rotation = Quaternion.Euler(0f, 0f, -180f);
                         break;
                         
                     case "down":
-                        Debug.Log("Hit the bottom side!");
+                        // Debug.Log("Hit the bottom side!");
                         transform.rotation = Quaternion.Euler(0f, 0f, 0f);
                         break;
                         
@@ -159,7 +159,7 @@ public class PlayerMovementScript : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        Debug.Log(string.Format("Hit: {0}", other.name));
+        // Debug.Log(string.Format("Hit: {0}", other.name));
         
         transform.rotation = Quaternion.Euler(0f, 0f, 0f);
         

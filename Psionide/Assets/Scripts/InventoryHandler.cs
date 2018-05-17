@@ -8,8 +8,8 @@ public class InventoryHandler : MonoBehaviour {
 	
 	public Transform InventoryGrid;
 
-	private List<Transform> _inventorySlots = new List<Transform>();
-	private List<GameObject> _inventoryContents = new List<GameObject>();
+	private List<Transform> _inventorySlots = new List<Transform>(23);
+	private List<GameObject> _inventoryContents = new List<GameObject>(23);
 
 	private void Awake() {
 		InventoryGrid = GameObject.Find("PlayerPrefab").transform.Find("Grid").transform;
@@ -21,17 +21,25 @@ public class InventoryHandler : MonoBehaviour {
 				_inventorySlots.Add(child);
 			}
 		}
+
+		for (var i = 0; i < 23; i++) {
+			_inventoryContents.Add(null);
+		}
 	}
 
 	public bool IsSlotFree(int slot) {
-		try {
-			var temp = _inventorySlots[slot];
+		// Debug.Log(_inventoryContents[slot]);
+		var items = "";
+		foreach (var i in _inventoryContents) {
+			items += i + ", ";
+		}
+		Debug.Log(string.Format("Items: {0}", items));
+		
+		if (_inventoryContents[slot] == null) {
 			return true;
 		}
-		catch (ArgumentOutOfRangeException e) {
-			// Console.WriteLine(e);
-			return false;
-		}
+
+		return false;
 	}
 
 	public void AddItem(GameObject item) {
@@ -39,12 +47,13 @@ public class InventoryHandler : MonoBehaviour {
 		
 		var num = 0;
 		while (!IsSlotFree(num)) {
-			num += 1;
+			num ++;
 		}
+		Debug.Log(num);
 
-		var position = _inventorySlots[num].position;
-		Instantiate(item, InventoryGrid.Find(_inventorySlots[num].name));
+		var itemObject = Instantiate(item, InventoryGrid.Find(_inventorySlots[num].name));
+		itemObject.transform.position = _inventorySlots[num].position;
 		
-		_inventoryContents.Add(item);
+		_inventoryContents[num] = item.gameObject;
 	}
 }
