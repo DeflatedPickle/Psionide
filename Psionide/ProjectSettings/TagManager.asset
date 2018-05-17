@@ -13,6 +13,7 @@ TagManager:
   - UpWall
   - DownWall
   - PlayerWeapon
+  - PlayerSafeZone
   layers:
   - Default
   - TransparentFX
