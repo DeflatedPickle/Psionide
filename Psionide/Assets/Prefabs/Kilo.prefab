@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114891314645639636}
   - component: {fileID: 61779749528467868}
   - component: {fileID: 95816151994004786}
+  - component: {fileID: 114752644006768140}
   m_Layer: 2
   m_Name: Kilo
   m_TagString: ContactDamage
@@ -85,6 +86,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114752644006768140
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1654850443395698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b25f3e5e57b291145bbe3b8bb64d97b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TotalHealth: 1
 --- !u!114 &114891314645639636
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -109,6 +123,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:

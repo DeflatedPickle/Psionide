@@ -14,7 +14,8 @@ public class InventoryHandler : MonoBehaviour {
 	private int _freeSlot = 0;
 
 	private void Awake() {
-		InventoryGrid = GameObject.Find("PlayerPrefab").transform.Find("Grid").transform;
+		// InventoryGrid = GameObject.Find("PlayerPrefab").transform.Find("Grid").transform;
+		InventoryGrid = GameObject.Find("Grid").transform;
 	}
 
 	void Start () {
@@ -31,6 +32,7 @@ public class InventoryHandler : MonoBehaviour {
 
 		var itemObject = Instantiate(item, InventoryGrid.Find(_inventorySlots[_freeSlot].name));
 		itemObject.transform.position = _inventorySlots[_freeSlot].position;
+		itemObject.transform.localScale = new Vector3(1.5f, 1.5f, 0);
 		
 		_inventoryContents[_freeSlot] = item.gameObject;
 

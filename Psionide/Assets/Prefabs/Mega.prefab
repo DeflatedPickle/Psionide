@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114356656622531230}
   - component: {fileID: 61276398526716166}
   - component: {fileID: 95045004356342278}
+  - component: {fileID: 114458232036213098}
   m_Layer: 2
   m_Name: Mega
   m_TagString: Untagged
@@ -99,6 +100,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bullet: {fileID: 4772553305129162, guid: 7e2b95e416fb11c4d81743ba86debf00, type: 2}
   ShootAt: {fileID: 0}
+--- !u!114 &114458232036213098
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1177152643778756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b25f3e5e57b291145bbe3b8bb64d97b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TotalHealth: 1
 --- !u!212 &212908085523805422
 SpriteRenderer:
   m_ObjectHideFlags: 1

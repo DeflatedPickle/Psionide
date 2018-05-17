@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MegaAI : MonoBehaviour {
+public class MegaAI : GenericAI {
 	public Transform Bullet;
 	
 	private Animator _animator;

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PetaAI : MonoBehaviour {
+public class PetaAI : GenericAI {
 	private Animator _animator;
 	public WallBounce WallBounce;
 	

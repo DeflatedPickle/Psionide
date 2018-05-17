@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 50868379862286368}
   - component: {fileID: 114704965289532598}
   - component: {fileID: 61814600867918830}
+  - component: {fileID: 114140975320233216}
   m_Layer: 0
   m_Name: Peta
   m_TagString: ContactDamage
@@ -88,6 +89,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &114140975320233216
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1408317907222164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b25f3e5e57b291145bbe3b8bb64d97b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TotalHealth: 2
 --- !u!114 &114704965289532598
 MonoBehaviour:
   m_ObjectHideFlags: 1

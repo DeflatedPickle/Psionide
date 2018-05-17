@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KiloAI : MonoBehaviour {
+public class KiloAI : GenericAI {
 	private Animator _animator;
 	// private KiloStateMachine _kiloStateMachine;
 	

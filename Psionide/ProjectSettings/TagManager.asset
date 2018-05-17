@@ -12,6 +12,7 @@ TagManager:
   - RightWall
   - UpWall
   - DownWall
+  - PlayerWeapon
   layers:
   - Default
   - TransparentFX

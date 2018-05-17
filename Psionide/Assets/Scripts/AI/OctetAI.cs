@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OctetAI : MonoBehaviour {
+public class OctetAI : GenericAI {
 	private MoveTowards _moveTowards;
 	
 	private void Awake() {
